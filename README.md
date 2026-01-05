@@ -1,5 +1,11 @@
 # Testing React Apps
 
+## In Collaboration with Mosh Hamedani
+
+This is Reacting testing course
+
+https://codewithmosh.com
+
 ## About this Project
 
 This is a React app built with the following technologies and libraries:
