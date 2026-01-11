@@ -1,32 +1,32 @@
-import { render, screen } from "@testing-library/react";
-import { User } from "../../src/entities";
-import UserAccount from "../../src/components/UserAccount";
+import { render, screen } from '@testing-library/react';
+import UserAccount from '../../src/components/UserAccount';
+import { User } from '../../src/entities';
 
-describe("UserAccount", () => {
-  it("should render user name", () => {
-    const user: User = { id: 1, name: "Mosh" };
+describe('UserAccount', () => {
+	it('should render user name', () => {
+		const user: User = { id: 1, name: 'Mosh' };
 
-    render(<UserAccount user={user} />);
+		render(<UserAccount user={user} />);
 
-    expect(screen.getByText(user.name)).toBeInTheDocument();
-  });
+		expect(screen.getByText(user.name)).toBeInTheDocument();
+	});
 
-  it("should render edit button if user is admin", () => {
-    const user: User = { id: 1, name: "Mosh", isAdmin: true };
+	it('should render edit button if user is admin', () => {
+		const user: User = { id: 1, name: 'Mosh', isAdmin: true };
 
-    render(<UserAccount user={user} />);
+		render(<UserAccount user={user} />);
 
-    const button = screen.getByRole("button");
-    expect(button).toBeInTheDocument();
-    expect(button).toHaveTextContent(/edit/i);
-  });
+		const button = screen.getByRole('button');
+		expect(button).toBeInTheDocument();
+		expect(button).toHaveTextContent(/edit/i);
+	});
 
-  it("should not render edit button if user is not admin", () => {
-    const user: User = { id: 1, name: "Mosh" };
+	it('should not render edit button if user is not admin', () => {
+		const user: User = { id: 1, name: 'Mosh' };
 
-    render(<UserAccount user={user} />);
+		render(<UserAccount user={user} />);
 
-    const button = screen.queryByRole("button");
-    expect(button).not.toBeInTheDocument();
-  });
+		const button = screen.queryByRole('button');
+		expect(button).not.toBeInTheDocument();
+	});
 });
