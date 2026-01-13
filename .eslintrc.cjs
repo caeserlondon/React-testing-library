@@ -9,9 +9,16 @@ module.exports = {
 	ignorePatterns: ['dist', '.eslintrc.cjs'],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
-		project: true,
+		project: './tsconfig.json',
 		tsconfigRootDir: __dirname,
 	},
+	ignorePatterns: [
+		'tailwind.config.ts',
+		'vite.config.ts',
+		'postcss.config.js',
+		'dist/',
+		'node_modules/',
+	],
 	plugins: ['react-refresh'],
 	rules: {
 		'react-refresh/only-export-components': [
