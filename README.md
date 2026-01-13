@@ -2,7 +2,7 @@
 
 ## In Collaboration with Mosh Hamedani
 
-This is Reacting testing course
+This is Reacting testing practice
 
 https://codewithmosh.com
 
