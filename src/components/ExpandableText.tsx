@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const ExpandableText = ({ text }: { text: string }) => {
 	const limit = 255;
+
 	const [isExpanded, setExpanded] = useState(false);
 
 	if (text.length <= limit) return <article>{text}</article>;
